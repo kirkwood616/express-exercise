@@ -84,7 +84,7 @@ shopRoutes.get("/shop-list", function (req, res) {
 		res.render("shops", { filteredShops });
 	} else {
 		let filteredShops: Shop[] = shops;
-		res.render("shops", { shops });
+		res.render("shops", { filteredShops });
 	}
 });
 
