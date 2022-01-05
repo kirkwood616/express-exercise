@@ -16,22 +16,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				{{#if filteredShops}}
-					{{#each filteredShops}}
-						<tr>
-							<td><a href="/shop-details/{{id}}">{{name}}</a></td>
-							<td>{{rating}}</td>
-						</tr>
-					{{/each}}
-				{{else}}
-					{{#each shops}}
-						<tr>
-							<td><a href="/shop-details/{{id}}">{{name}}</a></td>
-							<td>{{rating}}</td>
-						</tr>
-					{{/each}}
-
-				{{/if}}
+				{{#each filteredShops}}
+					<tr>
+						<td><a href="/shop-details/{{id}}">{{name}}</a></td>
+						<td>{{rating}}</td>
+					</tr>
+				{{/each}}
 			</tbody>
 		</table>
 		<br />
