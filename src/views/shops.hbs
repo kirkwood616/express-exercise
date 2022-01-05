@@ -1,0 +1,40 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style.css" />
+		<title>Shops</title>
+	</head>
+	<body>
+		<h1>Shops</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Rating</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#if filteredShops}}
+					{{#each filteredShops}}
+						<tr>
+							<td><a href="/shop-details/{{id}}">{{name}}</a></td>
+							<td>{{rating}}</td>
+						</tr>
+					{{/each}}
+				{{else}}
+					{{#each shops}}
+						<tr>
+							<td><a href="/shop-details/{{id}}">{{name}}</a></td>
+							<td>{{rating}}</td>
+						</tr>
+					{{/each}}
+
+				{{/if}}
+			</tbody>
+		</table>
+		<br />
+		<a href="/">Back to Homepage</a>
+	</body>
+</html>
