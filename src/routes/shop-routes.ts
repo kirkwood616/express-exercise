@@ -30,7 +30,6 @@ shopRoutes.get("/api/shops", function (req, res) {
 		res.json(filteredShops);
 	} else {
 		res.json(shops);
-		// res.render("shops", { shops });
 	}
 });
 
@@ -49,9 +48,7 @@ shopRoutes.post("/api/shops", function (req, res) {
 });
 
 shopRoutes.delete("/api/shops/:id", function (req, res) {
-	// use id parameter to delete the corresponding Shop object from array
 	let inputId: number = Number.parseInt(req.params.id);
-	// find index & delete
 	let shopIndex: number = shops.findIndex((shop) => shop.id === inputId);
 	shops.splice(shopIndex, 1);
 	res.status(204);
@@ -59,9 +56,6 @@ shopRoutes.delete("/api/shops/:id", function (req, res) {
 });
 
 shopRoutes.get("/api/shops/:id", function (req, res) {
-	// search shop array
-	// find shop by id property
-	// return the json response with the shop object
 	let idNum: number = parseInt(req.params.id);
 	let match = shops.find((shop) => shop.id === idNum);
 	if (match) {
